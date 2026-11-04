@@ -1,0 +1,8 @@
+{% extends 'base.html' %}{% block title %}Set up your group{% endblock %}
+{% block content %}<div class="page-wrap"><div class="page-head"><div><div class="eyebrow">WELCOME TO MEMBERPAY</div><h1>Make MemberPay yours</h1><p>Set up your independent group workspace. Nothing is shared with another group.</p></div></div>
+<form method="post" enctype="multipart/form-data" class="card"><h2>Your group and contribution rules</h2>{% include 'group_fields.html' %}
+<h2>Create your password</h2><p class="muted">There is no shared starting password. Keep your password safe: database backups do not replace it.</p>
+<div class="form-grid"><label>Password<input name="new_password" type="password" minlength="10" autocomplete="new-password" required></label><label>Confirm password<input name="confirm_password" type="password" minlength="10" autocomplete="new-password" required></label></div>
+<h2>Review before starting</h2><p class="help">Review the name, date, amounts and rule above. The start date and dues rule lock after you add members. You can change branding and defaults later in Settings. Receipt PDFs ask where to save; automatic backups stay in this workspace. Other folder choices are available in Settings.</p>
+<label><input name="reviewed" type="checkbox" value="yes" required style="width:auto"> I have reviewed these settings and want to create this group workspace.</label>
+<button type="submit" class="button primary">Create group workspace →</button></form></div>{% endblock %}

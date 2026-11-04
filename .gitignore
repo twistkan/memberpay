@@ -1,0 +1,26 @@
+# Local group records and credentials — never commit
+*.db
+*.db-*
+*.sqlite*
+password.txt
+credentials.json
+credentials.tmp
+workspace/
+backups/
+exports/
+*.pdf
+*.csv
+*.log
+.env
+.env.*
+# Generated build/test output and dependencies
+__pycache__/
+*.py[cod]
+.venv*/
+.vendor/
+build/
+dist/
+tmp/
+*.exe
+*.zip
+*.pdb

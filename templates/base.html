@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}MemberPay{% endblock %} · {{ circle_name }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="{{ url_for('dashboard') }}"><img src="{{ url_for('group_logo') }}" alt="Group logo"><span><strong>MemberPay</strong><small>{{ circle_name }}</small></span></a>
+      <nav>
+        <a class="nav-link {% if request.endpoint == 'dashboard' %}active{% endif %}" href="{{ url_for('dashboard') }}"><span>⌂</span> Dashboard</a>
+        <a class="nav-link {% if request.endpoint in ['members','new_member','member_detail','edit_member'] %}active{% endif %}" href="{{ url_for('members') }}"><span>♙</span> Members</a>
+        <a class="nav-link {% if request.endpoint == 'record_payment' %}active{% endif %}" href="{{ url_for('record_payment') }}"><span>＋</span> Record Payment</a>
+        <a class="nav-link {% if request.endpoint in ['reports','reports_csv'] %}active{% endif %}" href="{{ url_for('reports') }}"><span>▤</span> Payment Reports</a>
+        <a class="nav-link {% if request.endpoint == 'collections' %}active{% endif %}" href="{{ url_for('collections') }}"><span>◷</span> Monthly Overview</a>
+        <a class="nav-link {% if request.endpoint == 'reminders' %}active{% endif %}" href="{{ url_for('reminders') }}"><span>✉</span> Reminders</a>
+        <a class="nav-link {% if request.endpoint in ['expenses','expense_form'] %}active{% endif %}" href="{{ url_for('expenses') }}"><span>↗</span> Expenses</a>
+        <a class="nav-link {% if request.endpoint == 'activity' %}active{% endif %}" href="{{ url_for('activity') }}"><span>≡</span> Activity History</a>
+      <a class="nav-link {% if request.endpoint == 'settings' %}active{% endif %}" href="{{ url_for('settings') }}"><span>⚙</span> Settings</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <a class="backup-link" href="{{ url_for('backup') }}"><span>⇩</span> Back Up Now</a>
+        <a class="logout-link" href="{{ url_for('logout') }}">Lock app</a><p class="powered-by">Powered by Twist</p>
+        <p>Data stays on this computer.<br>Backups are saved in the <code>backups</code> folder.</p>
+      </div>
+    </aside>
+    <main class="main-content">
+      <header class="topbar"><div class="eyebrow">{{ circle_name }}</div><div class="local-pill"><i></i> Local only</div></header>
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}<div class="flash-stack">{% for category, message in messages %}<div class="flash {{ category }}">{{ message }}</div>{% endfor %}</div>{% endif %}
+      {% endwith %}
+      {% block content %}{% endblock %}
+    </main>
+  </div>
+  <script>
+    setInterval(() => fetch('{{ url_for("heartbeat") }}', {method: 'POST'}).catch(() => {}), 10000);
+    document.querySelectorAll('[data-confirm]').forEach(el => el.addEventListener('click', e => { if (!confirm(el.dataset.confirm)) e.preventDefault(); }));
+    document.querySelectorAll('form[data-prompt]').forEach(form => form.addEventListener('submit', event => { if (!confirm(form.dataset.prompt)) event.preventDefault(); }));
+    document.querySelectorAll('[data-copy-target]').forEach(button => button.addEventListener('click', async () => {
+      const field = document.getElementById(button.dataset.copyTarget);
+      try { await navigator.clipboard.writeText(field.value); button.textContent = 'Copied ✓'; }
+      catch (_) { field.focus(); field.select(); button.textContent = 'Text selected — press Ctrl+C'; }
+    }));
+  </script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

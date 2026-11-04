@@ -1,0 +1,27 @@
+# Build and runtime dependency notices
+
+- altgraph 0.17.5: altgraph/LICENSE
+- blinker 1.9.0: blinker/LICENSE.txt
+- bottle 0.13.4: bottle/licenses/LICENSE
+- cffi 2.1.1: cffi/licenses/LICENSE
+- charset-normalizer 3.5.2: charset-normalizer/licenses/LICENSE
+- click 8.5.0: click/licenses/LICENSE.txt
+- clr_loader 0.3.1: clr_loader/licenses/LICENSE
+- Flask 3.1.3: Flask/licenses/LICENSE.txt
+- itsdangerous 2.2.0: itsdangerous/LICENSE.txt
+- Jinja2 3.1.6: Jinja2/licenses/LICENSE.txt
+- MarkupSafe 3.0.4: MarkupSafe/licenses/LICENSE.txt
+- packaging 26.3: packaging/licenses/LICENSE, packaging/licenses/LICENSE.APACHE, packaging/licenses/LICENSE.BSD
+- pefile 2024.8.26: pefile/LICENSE
+- pillow 13.0.0: pillow/licenses/LICENSE
+- proxy_tools 0.1.0: See package metadata and upstream project for licensing.
+- pycparser 3.12: pycparser/licenses/LICENSE
+- pyinstaller 6.22.3: pyinstaller/licenses/COPYING.txt
+- pyinstaller-hooks-contrib 2026.9: pyinstaller-hooks-contrib/licenses/LICENSE
+- pythonnet 3.2.1: pythonnet/licenses/AUTHORS.md, pythonnet/licenses/LICENSE
+- pywebview 5.4: pywebview/LICENSE
+- pywin32-ctypes 0.2.3: pywin32-ctypes/LICENSE.txt
+- reportlab 4.5.1: reportlab/licenses/LICENSE
+- setuptools 84.2.1: setuptools/licenses/LICENSE, setuptools/_vendor/autocommand-2.2.2.dist-info/LICENSE, setuptools/_vendor/backports.tarfile-1.2.0.dist-info/LICENSE, setuptools/_vendor/importlib_metadata-8.7.1.dist-info/licenses/LICENSE, setuptools/_vendor/jaraco.text-4.0.0.dist-info/LICENSE, setuptools/_vendor/jaraco_context-6.1.0.dist-info/licenses/LICENSE, setuptools/_vendor/jaraco_functools-4.4.0.dist-info/licenses/LICENSE, setuptools/_vendor/more_itertools-10.8.0.dist-info/licenses/LICENSE, setuptools/_vendor/packaging-26.3.dist-info/licenses/LICENSE, setuptools/_vendor/packaging-26.3.dist-info/licenses/LICENSE.APACHE, setuptools/_vendor/packaging-26.3.dist-info/licenses/LICENSE.BSD, setuptools/_vendor/platformdirs-4.4.0.dist-info/licenses/LICENSE, setuptools/_vendor/tomli-2.4.0.dist-info/licenses/LICENSE, setuptools/_vendor/wheel-0.46.3.dist-info/licenses/LICENSE.txt, setuptools/_vendor/zipp-3.23.0.dist-info/licenses/LICENSE
+- typing_extensions 4.16.0: typing_extensions/licenses/LICENSE
+- Werkzeug 3.1.9: Werkzeug/licenses/LICENSE.txt
