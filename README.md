@@ -3,6 +3,12 @@
 An offline Windows app for member contributions, registration fees, receipts,
 statements, reminders, expenses and activity history. **Powered by Twist.**
 
+## Screenshot
+
+![MemberPay first-run form for configuring a new group](docs/screenshots/group-setup.png)
+
+First-run setup in a fresh group workspace.
+
 ## Windows download
 
 Download **MemberPaySetup.exe** from [Releases](https://github.com/twistkan/memberpay/releases/latest).
