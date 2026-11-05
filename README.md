@@ -1,5 +1,7 @@
 # MemberPay — reusable group edition 1.0.0
 
+**[Download for Windows](https://github.com/twistkan/memberpay/releases/download/v1.0.0-groups/MemberPaySetup.exe)** · [Release notes and checksums](https://github.com/twistkan/memberpay/releases/tag/v1.0.0-groups)
+
 [![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-Support%20Twist%20Apps-FFDD00?style=flat&logo=buymeacoffee&logoColor=black)](https://www.yotip.me/twistkan)
 
 An offline Windows app for member contributions, registration fees, receipts,
