@@ -1,5 +1,7 @@
 # MemberPay — reusable group edition 1.0.0
 
+[![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-Support%20Twist%20Apps-FFDD00?style=flat&logo=buymeacoffee&logoColor=black)](https://www.yotip.me/twistkan)
+
 An offline Windows app for member contributions, registration fees, receipts,
 statements, reminders, expenses and activity history. **Powered by Twist.**
 
